@@ -1,3 +1,4 @@
+require("dotenv").config()
 const express = require("express");
 //import express from "express"
 
@@ -21,6 +22,6 @@ app.get("/youtube", (req, res) => {
   res.send("<h2>Chai or Code</h2>");
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT, () => {
   console.log(`Example app listening on port ${port}`);
 });
